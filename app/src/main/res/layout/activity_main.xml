@@ -7,22 +7,63 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/linearLayoutToolbar"
         android:layout_width="match_parent"
         android:layout_height="54dp"
         android:layout_marginTop="1dp"
         android:orientation="horizontal"
+        android:backgroundTint="#48c9b0"
+        android:foregroundTint="#48c9b0"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <!-- Botón de Inicio -->
 
+        <ImageButton
+            android:id="@+id/btnPerfil"
+            android:padding="5dp"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:contentDescription="Botón Inicio"
+            android:scaleType="fitCenter"
+            android:src="@drawable/perfil" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="10">
+
+        <!-- Botón Final 1 -->
+        <ImageButton
+            android:id="@+id/btnFormulario"
+            android:scaleType="fitCenter"
+            android:padding="5dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="0"
+            android:src="@drawable/formulario"
+            android:contentDescription="Botón Final 1"
+            android:background="@android:color/transparent"/>
+
+        <!-- Botón Final 2 -->
+        <ImageButton
+            android:id="@+id/btnConfig"
+            android:scaleType=""
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0"
+            android:src="@drawable/config"
+            android:contentDescription="Botón Final 2"
+            android:background="@android:color/transparent"/>
 
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/LinearLayoutPrincipal"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginStart="1dp"
@@ -33,5 +74,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"></LinearLayout>
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutToolbar">
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
